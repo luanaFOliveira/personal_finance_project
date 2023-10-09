@@ -49,7 +49,7 @@ const AddUsers = () =>{
                 </FormGroup>
                 <FormGroup>
                     <Label for="password">Password</Label>
-                    <Input type="text" name="password" id="password" onChange={handleChange}/>
+                    <Input type="password" name="password" id="password" onChange={handleChange}/>
                 </FormGroup>
                 <FormGroup>
                     <Button color="primary" type="submit">Save</Button>{' '}
