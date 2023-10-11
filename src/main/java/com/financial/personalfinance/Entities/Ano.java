@@ -21,7 +21,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Mes {
+public class Ano {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -39,7 +40,7 @@ public class Mes {
     private User user;
 
     @OneToMany(mappedBy = "mes", cascade = CascadeType.ALL)
-    private List<Gasto> gastos;
+    private List<Mes> meses;
 
 
 }

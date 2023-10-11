@@ -1,10 +1,8 @@
 package com.financial.personalfinance.Entities;
 
 import java.math.BigDecimal;
-import java.util.List;
+import java.time.LocalDate;
 
-import jakarta.annotation.Generated;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +10,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,25 +18,26 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Mes {
+public class Gasto {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(nullable = false)
-    private String nome;
-   
+    private String descricao;
+
     @Column(nullable = false)
-    private BigDecimal totalGasto;
+    private BigDecimal valor;
+
     @Column(nullable = false)
-    private BigDecimal metaGasto;
+    private LocalDate data;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "mes_id")
+    private Mes mes;
 
-    @OneToMany(mappedBy = "mes", cascade = CascadeType.ALL)
-    private List<Gasto> gastos;
-
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
 
 }
