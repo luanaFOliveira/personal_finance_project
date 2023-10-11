@@ -35,8 +35,8 @@ public class Mes {
     private BigDecimal metaGasto;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "ano_id")
+    private Ano ano;
 
     @OneToMany(mappedBy = "mes", cascade = CascadeType.ALL)
     private List<Gasto> gastos;

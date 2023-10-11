@@ -39,7 +39,7 @@ public class Ano {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "mes", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "ano", cascade = CascadeType.ALL)
     private List<Mes> meses;
 
 
