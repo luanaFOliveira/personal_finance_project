@@ -1,7 +1,7 @@
 import './controleMensal.css';
 import React, { useEffect, useState } from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
-
+import GastoCard from '../Components/GastoCard';
 
 const ControleMensal = () => {
 
@@ -11,6 +11,10 @@ const ControleMensal = () => {
         return <p>Loading...</p>;
     }
 
+    var descricao = "Descricao";
+    var data = "11/11/2022";
+    var preco = "R$80,00";
+
   return (
     <div className='wrapper-mensal'>
         <div className='titulo-mensal'>Controle Mensal</div>
@@ -18,66 +22,18 @@ const ControleMensal = () => {
                 <div class="col-lg-3">
                     <div className='categoria-box'>
                         <div className='categoria-box-titulo'>Alimentos</div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
                         <div className='categoria-box-footer'>Total gasto: R$100,00</div>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div className='categoria-box'>
                         <div className='categoria-box-titulo'>Animais</div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
                         <div className='categoria-box-footer'>Total gasto: R$100,00</div>
                     </div> 
                 </div>
@@ -108,66 +64,18 @@ const ControleMensal = () => {
                 <div class="col-lg-3">
                     <div className='categoria-box'>
                         <div className='categoria-box-titulo'>Casa</div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
                         <div className='categoria-box-footer'>Total gasto: R$100,00</div>
                     </div>           
                 </div>
                 <div class="col-lg-3">
                     <div className='categoria-box'>
                         <div className='categoria-box-titulo'>Transporte</div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
-                        <div className="card gasto-card">
-                            <div class="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Descricao</h5>
-                                <h5 class="card-title">R$80,00</h5>
-                                </div>
-                                <h6 class="card-subtitle text-muted">11/11/2022</h6>
-                            </div>
-                        </div>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
+                        <GastoCard descricao={descricao} preco={preco} data={data}/>
                         <div className='categoria-box-footer'>Total gasto: R$100,00</div>
                     </div>           
                 </div>
@@ -187,3 +95,4 @@ const ControleMensal = () => {
 
 };
 export default ControleMensal;
+
