@@ -4,6 +4,10 @@
 ### Back-end: Java Spring Boot
 ### Front-end: React js
 
+## Para rodar
+### Back-end -> rodar o spring boot, pelo dashboard do visual studio
+### Front-end -> ir para o diretorio app e rodar npm start
+
 ## Front-end
 ### O que foi feito
 #### Foi feita a pagina de controle mensal
